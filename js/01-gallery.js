@@ -22,12 +22,12 @@ const renderGalleryItems = (pictures) =>
     (acc, picture) =>
       acc +
       `<div class="gallery__item">
-  <a class="gallery__link" href=${galleryItems.original}>
+  <a class="gallery__link" href=${picture.original}>
     <img
       class="gallery__image"
-      src=${galleryItems.preview}
-      data-source=${galleryItems.original}
-      alt=${galleryItems.description}
+      src=${picture.preview}
+      data-source=${picture.original}
+      alt=${picture.description}
     />
   </a>
 </div>`,
