@@ -19,19 +19,11 @@ const insertGalleryItems = (string) => {
 };
 insertGalleryItems(renderGalleryItems(galleryItems));
 
-gallery.addEventListener("click", onGalleryClick);
-
-function onGalleryClick(evt) {
-  evt.preventDefault();
-
-  if (!evt.target.classList.contains("gallery__image")) {
-    return;
-  }
-  var lightbox = new SimpleLightbox(".gallery", {
+  const lightbox = new SimpleLightbox(".gallery a", {
     captionsData: "alt",
     captionDelay: 250,
     scrollZoom: false,
   });
-}
+
 console.log(galleryItems);
 
