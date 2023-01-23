@@ -1,5 +1,6 @@
 import { galleryItems } from "./gallery-items.js";
 
+const gallery = document.querySelector(".gallery");
 const renderGalleryItems = (pictures) =>
   pictures.reduce(
     (acc, picture) =>
@@ -16,14 +17,12 @@ const renderGalleryItems = (pictures) =>
 </div>`,
     ""
   );
-
 const insertGalleryItems = (string) => {
-  const gallery = document.querySelector(".gallery");
+  
   gallery.insertAdjacentHTML("beforeend", string);
 };
 insertGalleryItems(renderGalleryItems(galleryItems));
 
-const gallery = document.querySelector(".gallery");
 gallery.addEventListener("click", onGalleryClick);
 
 function onGalleryClick(evt) {
